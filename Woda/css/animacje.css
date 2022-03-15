@@ -1,0 +1,101 @@
+.box {
+  width: 300px;
+  height: 300px;
+  border: 5px solid black;
+  margin-bottom: 50px;
+}
+
+.line {
+  background: black;
+  color: white;
+  height: 50px;
+  margin-bottom: 25px;
+}
+
+.proste-animowane-tlo {
+  animation-name: proste-animowane-tlo;
+  animation-duration: 2000ms;
+}
+
+@keyframes proste-animowane-tlo {
+	from {
+		background: blue;
+	}
+	
+	to {
+		background: red;
+	}
+}
+
+.zapetlone-animowane-tlo {
+  animation-name: zapetlone-animowane-tlo;
+  animation-duration: 2000ms;
+}
+
+@keyframes zapetlone-animowane-tlo {
+  from {
+    background: blue;
+  }
+  
+  50% {
+    background: red;
+  }
+  
+  to {
+    background: blue;
+  }
+}
+
+.animacja-dlugosci {
+  animation-name: animacja-dlugosci;
+  animation-duration: 2000ms;
+}
+
+@keyframes animacja-dlugosci {
+  from {
+    width: 0%;
+  }
+  
+  to {
+    width: 100%;
+  }
+}
+
+.animacja-sprites {
+  background-image: url("http://asp.zywicki.pl/patryk/sprite-animation/img/sprite-character.png");
+  animation-name: animacja-sprites;
+  animation-duration: 2000ms;
+  animation-timing-function: steps(6);
+}
+
+@keyframes animacja-sprites {
+  from {
+    background-position: 0px 0px;
+  }
+  
+  to {
+    background-position: -1920px 0px;
+  }
+}
+
+/* Klasy pomocnicze */
+
+.zostaw-ostatnia-klatke {
+  animation-fill-mode: forwards;
+}
+
+.animuj-w-nieskonczonosc {
+  animation-iteration-count: infinite;
+}
+
+.tf-linear {
+  animation-timing-function: linear;
+}
+
+.tf-bezier {
+  animation-timing-function: cubic-bezier(0,1.69,1,-0.99);
+}
+
+.tf-step-4 {
+  animation-timing-function: steps(5);
+}
